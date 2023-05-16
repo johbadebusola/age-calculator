@@ -1,38 +1,117 @@
 .App {
-  text-align: center;
+  background-color: hsl(0, 0%, 94%);
+  height: 100vh;
+  padding: 1em;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.cont {
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 1em;
+  padding: 2.5em 1em;
+  margin-top: 3.8em;
+  border-bottom-right-radius: 5em;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.inputFeildCont {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 4em;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.inputFeildCont > .inputField {
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+
+.inputFeildCont > .inputField > label {
+  margin-bottom: 0.5em;
+  color: hsl(0, 0%, 8%);
+  font-weight: bold;
+}
+
+.inputFeildCont > .inputField > input {
+  width: 60px;
+  padding: 0.8em;
+  border: 1px solid hsl(0, 1%, 44%);
+  border-radius: 7px;
+  font-size: 1.2em;
+  color: hsl(0, 0%, 8%);
+  font-weight: bolder;
+}
+
+.inputFeildCont > .inputField > p {
+  font-size: 10px;
+  display: none;
+  margin-bottom: -0.5em;
+}
+
+.inputFeildCont > .inputField > input::placeholder {
+  font-weight: bolder;
+
+  /* font-size: 1.4em;
+  color:  hsl(0, 0%, 8%); */
+}
+
+.arrow {
+  margin-top: -2.5em;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: hsl(259, 100%, 65%);
+  border-radius: 50%;
+  padding: 7px;
+  width: 50px;
+  height: 50px;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.arrow:hover{
+  background-color: rgb(86, 129, 20);
+}
+.arrow > img {
+  width: 60%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.output {
+  margin-bottom: 4em;
+  margin-top: -3em;
+}
+.output > h2 {
+  font-size: 4em;
+  margin-bottom: -1em;
+  color: hsl(259, 100%, 65%);
+  margin-left: 0.5em;
+}
+
+.output > h2 span {
+  color: hsl(0, 0%, 8%);
+}
+
+.error {
+  color: hsl(0, 100%, 67%) !important;
+}
+
+.error-border {
+  border: 1px solid hsl(0, 100%, 67%) !important ;
+}
+
+.error-message {
+  display: inline !important;
+  color: hsl(0, 100%, 67%) !important;
+}
+
+@media (min-width: 1000px) {
+  .App {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-  to {
-    transform: rotate(360deg);
+  .cont {
+    width: 700px;
+  }
+
+  .arrow{
+margin-right: 0;
   }
 }
